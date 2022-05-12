@@ -1,0 +1,17 @@
+1
+Nazwa atrybutu Wartość 1 Wartość 2 Wartość 3 Nazwa atrybuty     Wartośc 1      Wartość 2 
+Nr_rzeczy       23         34       25        Kod_Budynku       DT             GL
+Nazwa_rzeczy  HP D         HP T     DT Scan   Nazwa_Budynku     Dydaktyczny    Główny
+Nr_Pokoju     325          325      125       Kierownik_Budynku J.L.Kaczyński  D. Tusk
+Kod_Budynku  DT            DT       GL
+
+
+2
+Nazwa atrybutu Wartość 1 Wartość 2 Wartość 3 Nazwa atrybuty     Wartośc 1      Wartość 2 
+Nr_rzeczy       23         34       25        Kod_Budynku       DT             GL
+Nazwa_rzeczy  HP D         HP T     DT Scan   Nazwa_Budynku     Dydaktyczny    Główny
+
+Nazwa atrybutu Wartość 1 Wartość 2 Wartość 3 Nazwa atrybuty     Wartośc 1      Wartość 2 
+Nr_rzeczy       23         34       25        Kod_Budynku       DT             GL
+Nr_Pokoju     325          325      125       Kierownik_Budynku J.L.Kaczyński  D. Tusk
+Kod_Budynku  DT            DT       GLKo

@@ -1,0 +1,7 @@
+Anomalie:
+
+Jedno zamówienie ma 2 produkty
+Część województw ma przedrostek woj inne nie
+Komplet żarówek nie ma napisanej liczby sztuk
+Rozbicie AdresuKlienta na ulica, kod_pocztowy, Miasto, województwo
+Rozbicie SzczegolyZamowienia Rzecz, liczba sztuk, cena

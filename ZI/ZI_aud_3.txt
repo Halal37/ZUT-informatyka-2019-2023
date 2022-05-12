@@ -1,0 +1,116 @@
+Zad1 Które z podanych zależności są zależnościami funkcyjnymi w schemacie relacyjnym
+R=(U,F), gdzie U = {A, B, C, D} i F={CD->A, DA -> C}?
+A. CD -> BA
+B. BCD -> A
+C. AD -> BC
+
+A nie jest prawdziwa
+B jest prawdziwa
+C nie jest prawdziwa
+
+Zad2  Które z poniższych zależności funkcjonalnych NIE są prawdziwe w schemacie relacji
+R=(U, F), gdzie U={A, B, C, D i E} i F= {A -> B, A -> C, CD -> E, B -> D, E -> A}?
+A. CD -> AC
+B. BD -> CD
+C. BC -> CD
+D. AC -> BC
+{C, D} trywialność
+{C, D, E} CD -> E
+{C, D, E, A} E -> A
+{C, D, E, A, B} A -> B
+A jest prawdziwe, A błędne
+BD
+{B, D} trywialność
+B nie jest prawdziwe, B prawidłowe
+{B, C} trywialność
+{B, C, D} B -> D
+{B, C, D, E} CD -> E
+{B, C, D, E, A} E -> A
+Zależność jest prawdziwa, C-błędna
+{A, C} trywialność
+{A, C, B} A -> B
+{A, C, B, D} B -> D
+{A, C, B, D, E} CD -> E
+Zależność jest prawdziwa, D-błędna
+
+Zad3 Który z podanych zbiorów atrybutów jest kluczem w podanym schemacie relacyjnym R.
+gdzie U={A, B, C, D}, F = {A->B, AC->D}?
+A. {A, C}
+B. {A}
+C. {B, D}
+{A, C} trywialność
+{A, C, D} AC -> D
+{A, C, D, B} A -> B
+Jest kluczem kandydujacym
+{A}
+{A} trywialność
+{A, B} A -> B
+Nie jest kandydatem
+{B, D} trywialność
+Nie jest kandydatem
+
+Klucz {A, C} relacji
+
+Zad4  Który zestaw atrybutów jest kluczem relacji R, U = {E, F, G, H, I, J, K, L, M, N}
+i zbiór zależności funkcyjnych F=(EF -> G, F -> IJ, EH ->KL, K ->M, L ->N).
+A. {E, F}
+B. {E, F, H}
+C. {E, F, H, K, L}
+D. {E}
+{E, F} trywialność
+{E, F, G} EF-> G
+{E, F, G, I, J} F -> IJ
+Nie nadaje się na klucz
+
+{E, F, H} trywialność
+{E, F, H, G} EF-> G
+{E, F, H, G, I, J} F -> IJ
+{E, F, H, G, I, J, K, L} EH -> KL
+{E, F, H, G, I, J, K, L, M} K -> M
+{E, F, H, G, I, J, K, L, M, N} L -> N
+Nadaje się na klucz
+
+C Klucz kandydujący
+
+D nie kandyduje
+
+B jest kluczem
+
+Zad5  Rozważmy schemat relacji R = (A, B, C, D, E, H) i F= {A–> B, BC–> D, E–> C, D–> A}.
+Wskaż klucze kandydujące R?
+A. {AE}, {BE}
+B. {AE}, {BE}, {DE}
+C. {AEH}, {BEH}, {BCH}
+D. {AEH}, {BEH}, {DEH}
+
+{A, E} trywialność
+{A, E, B} A -> B
+{A, E, B, C} E -> C
+{A, E, B, C, D} BC -> D
+
+A Nie są kluczami
+
+B Nie są kluczami
+
+{A, E, H} trywialność
+{A, E, H, B} A -> B
+{A, E, H, B, C} E -> C
+{A, E, H, B, C, D} BC -> D
+
+{B,E,H} trywialność
+{B, E, H, C} E -> C
+{B, E, H, C, D} BC -> D
+{B, E, H, C, D, A} D -> A
+
+{B, C, H} trywialność
+{B, C, H, D} BC -> D
+{B, C, H, D, A} D -> A
+Nie jest kluczem 
+
+C Nie są kluczami
+
+{D, E, H} trywialność
+{D, E, H, C} E-> C
+{D, E, H, C, A} D -> A
+{D, E, H, C, A, B} A -> B
+D są kluczami
