@@ -1,0 +1,81 @@
+F='(x.^3)+(x.^2)-20*x'
+f=inline(F);
+a=0;
+b=6;
+x=a:0.1:b;
+xmin=fminbnd(f,a,b)
+f(xmin);
+a_kopia=a;
+b_kopia=b;
+newton_iteracje=0;
+polowienie_iteracje=0;
+zloto_iteracje=0;
+l=b-a;
+c=(a+b)/2; 
+x1=0;
+x2=0;
+while(b-a)>0.01 
+    polowienie_iteracje=polowienie_iteracje+1;
+    l=b-a;
+   x1=a+0.25*l;
+   x2=b-0.25*l;
+    if abs(f(c))<=0.01
+       break 
+   else
+        if (f(c)<f(x1) && f(c)<f(x2))
+            b=b-0.25*l;
+            a=a+0.25*l;
+            c=(a+b)/2; 
+        elseif f(c)>f(x2)
+                a=c;
+                c=x2;
+            else
+                b=c;
+                c=x1;
+            
+        end
+    end
+  polowienie_wynik=(a+b)/2;  
+end
+polowienie_wynik
+polowienie_iteracje
+a=a_kopia;
+b=b_kopia;
+l=b-a;
+x1=a+0.382*l;
+x2=a+0.618*l;
+while(b-a)>0.01 
+ zloto_iteracje=zloto_iteracje+1;   
+ if f(x1)<f(x2)
+     b=x2;
+ else
+     a=x1;
+ end
+ l=b-a;
+ x1=a+0.382*(l);
+ x2=a+0.618*(l);
+ wynik_zloto=(b+a)/2;
+end
+wynik_zloto
+zloto_iteracje
+a=a_kopia;
+b=b_kopia;
+x0=a;
+przedzial=a:0.1:b;
+k=1;
+h=0.2;
+newton_iteracje=0;
+newton_wynik=0;
+while (k<2)||(abs(przedzial(k)-przedzial(k-1))>0.01)
+    newton_iteracje=newton_iteracje+1;
+    k=k+1;
+    przedzial(newton_iteracje+1)=przedzial(newton_iteracje)-((f(przedzial(newton_iteracje)-2*h)+8*f(przedzial(newton_iteracje)+h)-8*f(przedzial(newton_iteracje)-h)-f(przedzial(newton_iteracje)+2*h))/(12*h))./(-f(przedzial(newton_iteracje)-2*h)+16*f(przedzial(newton_iteracje)+h)-30*f(przedzial(newton_iteracje))+16*f(przedzial(newton_iteracje)-h)-f(przedzial(newton_iteracje)+2*h))/(12*h);
+    if(f(przedzial(newton_iteracje+1))<f(przedzial(newton_iteracje))) 
+    newton_wynik=przedzial(newton_iteracje+1);
+    end
+    if(newton_iteracje+1 == length(przedzial))
+       break
+    end
+end
+newton_wynik
+newton_iteracje

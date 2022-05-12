@@ -1,0 +1,18 @@
+x=0:0.5:3
+y=sin(x.*x)
+xi=0:0.01:3
+yi_lineax=interp1(x,y,xi,'linear')
+yi_spline=interp1(x,y,xi,'spline')
+yi_cubic=interp1(x,y,xi,'cubic')
+subplot(1,3,1)
+plot(x,y,'o',xi,yi_lineax,'k',xi,sin(xi.*xi),'-.m')
+axis([0 3 -1 1])
+title('linear')
+subplot(1,3,2)
+plot(x,y,'o',xi,yi_spline,'k',xi,sin(xi.*xi),'-.m')
+axis([0 3 -1 1])
+title('spline')
+subplot(1,3,3)
+plot(x,y,'o',xi,yi_cubic,'k',xi,sin(xi.*xi),'-.m')
+axis([0 3 -1 1])
+title('cubic')
