@@ -1,0 +1,17 @@
+Adres IP Twojego hosta:10.0.2.15
+Pytanie 1: badstore,1000.jpg
+Pytanie 2: Atak taki pozwolił poznać układ witryny, a także to jakie strony i pliki się na niej zawierają.
+Pytanie 3:
+Pytanie 4:
+Podatność 1: Lotus Domino default files.
+Środek zaradczy 1: Remove default files.
+Podatność 2: Directory browsing.
+Środek zaradczy 2: Disable directory browsing. If this is required, make sure the files does not induce risks.
+Pytanie 6: Przekierowanie na strone sekretnego administratora menu
+Pytanie 7: Add User, View Sales Reports, Backup Databases
+Pytanie 8: Ukazał się error, ponieważ nie jest się adminem
+Jas Fasola, jasfasola@gmail.com,1234
+Pytanie 9:83218ac34c1834c26781fe4bde918ee4
+Pytanie 10: Welcome
+
+

@@ -1,0 +1,33 @@
+A B C D R P Z Y
+2*(3^3)+log(2401,7)                                                       
+2^(1/3)
+(2^(1/3))^(1/5)
+A=matrix(c(1,-10,12,3,2,1,-8,4,5),3,3)
+B=matrix(c(1,3,-1,2,1,5),3,2)
+det(A)
+Z=t(A)
+det(Z)
+C=solve(A)
+D=solve(B)
+G=A%*%A
+R=A%*%C
+P=A%*%Z
+Y=A[1,1:3]*B[1:3,2]
+N=matrix(c(1,2,5,-2,1,2,5,-3,-1,0,2,1,-2,3,5,2),4,4)
+U=matrix(c(-7,21,40,2),4,1)
+X=solve(N,U)
+Odwr=solve(N)
+Odwr[2,3]
+w=(1:100)^2
+summary(factor(w%%10))
+summary(factor(w%%2))
+summary(factor(w%%3))
+summary(factor(w%%6))
+rad=function(x){
+  rr=x*(pi/180)
+}
+ramka=rad(c(0,30,45,60,90))
+Tablice=data.frame(
+  sinus=sin(ramka),cosinus=cos(ramka),tangens=tan(ramka),cotangens=cos(ramka)/sin(ramka)
+)
+
