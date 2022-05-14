@@ -1,0 +1,1 @@
+Niestety, ale nie mogłem doinstalować wtyczki SpatiaLite do mojego QGIS, załączam screen z błędem, ten i podobne pojawiały się na ekranie przy różnych wersjach wtyczki, które pobierałem w zipach, ponadto wtyczka nie pojawiła się na liscie tych do zainstalowania.
