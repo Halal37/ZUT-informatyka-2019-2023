@@ -102,7 +102,7 @@ return weatherBlock;
     }
 }
 
-document.weatherApp = new WeatherApp("f0b3eaa581be2e88d2aa4ed9ed5e771f", "#weather-results-container");
+document.weatherApp = new WeatherApp("", "#weather-results-container");
 
 document.querySelector("#checkButton").addEventListener("click", function() {
     const query = document.querySelector("#locationInput").value;
