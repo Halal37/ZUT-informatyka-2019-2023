@@ -1,7 +1,0 @@
-
-
-NET "iCLK" LOC = C9;
-
-# PlanAhead Generated physical constraints 
-
-NET "oSOUND" LOC = C5;

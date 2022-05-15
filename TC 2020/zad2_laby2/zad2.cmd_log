@@ -1,2 +1,0 @@
-sch2hdl -intstyle ise -family spartan3e -verilog zad2.vf -w C:/Users/JaSzw/OneDrive/Pulpit/ISE/zad2_laby2/zad2.sch 
-sch2hdl -intstyle ise -family spartan3e -verilog zad2.vf -w C:/Users/JaSzw/OneDrive/Pulpit/ISE/zad2_laby2/zad2.sch 

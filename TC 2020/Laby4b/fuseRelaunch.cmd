@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4b/Laby4b_Laby4b_sch_tb_isim_beh.exe" -prj "C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4b/Laby4b_Laby4b_sch_tb_beh.prj" "work.Laby4b_Laby4b_sch_tb" "work.glbl" 
