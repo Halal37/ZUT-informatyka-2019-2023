@@ -1,0 +1,3 @@
+verilog work "Laby7sumator_tb.v"
+verilog work "sas.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

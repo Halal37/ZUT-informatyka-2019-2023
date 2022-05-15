@@ -1,0 +1,8 @@
+sch2hdl -intstyle ise -family spartan3e -verilog Laby4a.vf -w C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4/Laby4a.sch 
+xst -intstyle ise -ifn "C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4/Laby4a.xst" -ofn "C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4/Laby4a.syr" 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis -ofmt verilog -sim Laby4a.ngc Laby4a_synthesis.v 
+sch2hdl -intstyle ise -family spartan3e -verilog Laby4a_drc.vf -w C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4/Laby4a.sch 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 Laby4a.ngc Laby4a.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Laby4a_map.ncd Laby4a.ngd Laby4a.pcf 
+par -w -intstyle ise -ol high -t 1 Laby4a_map.ncd Laby4a.ncd Laby4a.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Laby4a.twx Laby4a.ncd -o Laby4a.twr Laby4a.pcf 

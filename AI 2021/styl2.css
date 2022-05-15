@@ -1,0 +1,76 @@
+@media screen and (max-width: 480px) {
+    body {
+		 width: 240px; 
+		 float: left;	
+	text-align: justify;
+	font-size: 70%;
+	
+  }
+
+}
+body{
+background-image: url("Adam_Mickiewicz_według_dagerotypu_paryskiego_z_1842_roku.jpg");
+background-repeat: repeat;
+color: white;
+padding: 160px;
+background-size: 300px 400px;
+}
+img{
+
+opacity: 0.75;
+display: block; 
+width: 20%;
+margin-left: auto; 
+
+}
+h1{
+	font-size: 800%;
+    text-align: center;	
+	border: 5px dashed purple; 
+}
+h2{
+background: rgba(23, 10, 151, .1);
+color: orange;	
+
+}
+h3{
+	text-decoration: underline overline;
+background: rgba(121, 70, 83, .4);	
+text-align: right;	
+margin-left: 956px;
+}
+p{
+
+background: rgba(51, 170, 51, .1);
+font-family: georgia;
+
+
+}
+
+ul{
+text-align: justify;	
+font-family: tahoma;
+width: 70px;
+float: left;
+font-size: 12%;
+}
+div{}
+	.link{
+		color: white;
+		font-size: 200%;
+		text-align: right;
+		border: 5px dashed green; 
+	}
+	a{
+		color:red;
+	}
+
+	footer{
+	  
+  text-align: center;
+  background: rgba(33, 34, 271, .3);
+  color: white;
+  font-size: 30px;
+  transform: translate(15px, 30px);
+
+	}

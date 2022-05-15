@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Jun 03 10:53:55 2020
+
+drc -z Laby12.ncd Laby12.pcf
+
+DRC detected 0 errors and 0 warnings.

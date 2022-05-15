@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maps with Leaflet</title>
+	</head>
+<body>
+<canvas id="obrazek" width="900" height="900"></canvas>
+
+    <script>
+	//const canvas1 = document.getElementById(„plotno”);
+	        let singleCanvas = document.getElementById("obrazek");
+        let singleContext = singleCanvas.getContext("2d");
+let image = document.createElement('img');
+image.src="fin.jpg";
+image.addEventListener("load",function(){
+//const con = canvas1.getContext("2d");
+singleContext.drawImage(image, 0, 0, 900, 900);
+});
+    </script>
+</body>
+</html>

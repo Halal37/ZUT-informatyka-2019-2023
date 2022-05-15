@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Laby4poda.vf
+// /___/   /\     Timestamp : 04/05/2020 21:43:30
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4poda/Laby4poda.vf -w C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby4poda/Laby4poda.sch
+//Design Name: Laby4poda
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Laby4poda(i_b, 
+                 i_c, 
+                 o_y);
+
+    input i_b;
+    input i_c;
+   output o_y;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_7;
+   
+   AND2  XLXI_1 (.I0(XLXN_5), 
+                .I1(i_c), 
+                .O(XLXN_2));
+   AND2  XLXI_2 (.I0(XLXN_7), 
+                .I1(i_b), 
+                .O(XLXN_1));
+   OR2  XLXI_3 (.I0(XLXN_1), 
+               .I1(XLXN_2), 
+               .O(o_y));
+   INV  XLXI_4 (.I(i_b), 
+               .O(XLXN_5));
+   INV  XLXI_5 (.I(i_c), 
+               .O(XLXN_7));
+endmodule

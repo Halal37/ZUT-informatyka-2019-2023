@@ -1,0 +1,28 @@
+Command line:
+   Laby7_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56496
+
+Fri Apr 24 18:42:37 2020
+
+
+ Elaboration Time: 0.140625 sec
+
+ Current Memory Usage: 5003.72 Meg
+
+ Total Signals          : 17
+ Total Nets             : 37
+ Total Signal Drivers   : 8
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 11
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 140
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 5003.72 Meg
+
+Fri Apr 24 18:43:08 2020
+

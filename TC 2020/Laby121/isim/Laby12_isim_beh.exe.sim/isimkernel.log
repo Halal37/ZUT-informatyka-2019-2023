@@ -1,0 +1,28 @@
+Command line:
+   Laby12_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  61412
+
+Wed Jun 03 10:42:43 2020
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5476 Meg
+
+ Total Signals          : 17
+ Total Nets             : 107
+ Total Signal Drivers   : 14
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 18
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 238
+
+ Total Simulation Time: 0.0625 sec
+
+ Current Memory Usage: 5476 Meg
+
+Wed Jun 03 10:42:47 2020
+

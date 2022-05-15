@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maps with Leaflet</title>
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+    <script src="leaflet-1.7.1/leaflet-src.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
+
+    <style>
+        #map {
+            width: 600px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        #rasterMap {
+            width: 300px;
+            height: 150px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<style>
+        div.item {
+            display: inline-block;
+            width: 150px;
+            height: 75px;
+            margin: 20px;
+			position: relative;
+			bottom: 20px;
+        }
+        div.draggable {
+            background-color: #7f7fe9;
+        }
+		        div.drag-target {
+            width: 600px;
+            height: 300px;
+            border: 2px dashed #7f7fe9;
+            margin-bottom: 25px;
+			position: absolute;
+			 top: 5px;
+			right: 100px;
+        }
+</style>
+<body>
+    <div id="map"></div>
+    <div class="drag-target"></div>
+    <button id="getLocation">Get Current Location</button>
+    <button id="saveButton">Save Raster Map</button>
+    <br>
+
+    <canvas id="rasterMap"></canvas>
+	
+    <div id="draggable-item-1" class="item draggable" draggable="true"></div>
+     <div id="draggable-item-2" class="item draggable" draggable="true"></div>
+	 
+	 <div id="draggable-item-3" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-4" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-5" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-6" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-7" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-8" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-9" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-10" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-11" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-12" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-13" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-14" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-15" class="item draggable" draggable="true"></div>
+	 <div id="draggable-item-16" class="item draggable" draggable="true"></div>
+    <script>
+function getClippedRegion(image, x, y, width, height) {
+
+    var canvas = document.createElement('canvas'),
+        ctx = canvas.getContext('2d');
+
+    canvas.width = width;
+    canvas.height = height;
+
+    //                   source region         dest. region
+    ctx.drawImage(image, x, y, width, height,  0, 0, width, height);
+
+    return canvas;
+}
+        let map = L.map('map').setView([53.430127, 14.564802], 18);
+        // L.tileLayer.provider('OpenStreetMap.DE').addTo(map);
+        L.tileLayer.provider('Esri.WorldImagery').addTo(map);
+      //  let marker = L.marker([53.430127, 14.564802]).addTo(map);
+       // marker.bindPopup("<strong>Hello!</strong><br>This is a popup.");
+
+        document.getElementById("saveButton").addEventListener("click", function() {
+            leafletImage(map, function (err, canvas) {
+                // here we have the canvas
+                let rasterMap = document.getElementById("rasterMap");
+				
+				//window.location.href=image; 
+                let rasterContext = rasterMap.getContext("2d");
+
+                rasterContext.drawImage(canvas,0, 0, 300, 150);
+				var image = new Image();
+				image.onload=start;
+				image.src=rasterMap.toDataURL();
+				var cols = 4,
+    rows    = 4;
+	var cw=rasterMap.width;
+var ch=rasterMap.height;
+function start(){
+
+  var iw=rasterMap.width=image.width;
+  var ih=rasterMap.height=image.height;
+  var pieceWidth=iw/cols;
+  var pieceHeight=ih/rows;
+
+  var pieces = [
+    {col:0,row:0},
+    {col:1,row:0},
+    {col:2,row:0},
+	{col:3,row:0},
+    {col:0,row:1},
+    {col:1,row:1},
+    {col:2,row:1},
+	{col:3,row:1},
+    {col:0,row:2},
+    {col:1,row:2},
+    {col:2,row:2},
+	{col:3,row:2},
+	{col:0,row:3},
+	{col:1,row:3},
+	{col:2,row:3},
+	{col:3,row:3},
+  ]
+    shuffle(pieces);
+
+    var i=0;
+    for(var y=0;y<rows;y++){
+    for(var x=0;x<cols;x++){
+    var p=pieces[i++];
+	console.log(i);
+	var i2=String(i);
+	var text='draggable-item-'+i.toString();
+	console.log(text);
+	
+  rasterContext.drawImage(
+    // from the original image
+    image,
+    // take the next x,y piece
+    x*pieceWidth, y*pieceHeight, pieceWidth, pieceHeight,
+    // draw it on canvas based on the shuffled pieces[] array
+    p.col*pieceWidth, p.row*pieceHeight, pieceWidth, pieceHeight
+  );
+  var elem=document.createElement("img");
+  elem.setAttribute("src", rasterMap.toDataURL());
+  document.getElementById('draggable-item-'+i.toString()).appendChild(elem);
+}}
+
+
+}
+
+function shuffle(a){
+  for(var j, x, i = a.length; i; j = Math.floor(Math.random() * i), x = a[--i], a[i] = a[j], a[j] = x);
+  return a;
+};
+
+	
+	//xIndex = Math.round((mx - tileWidth * 0.5) / tileWidth);
+//yIndex = Math.round((my - tileHeight * 0.5) / tileHeight);
+				
+				//rasterContext.drawImage(canvas,0, 0, 300, 150, 0, 0, 300, 150);
+				//rasterContext.drawImage(canvas,150, 0, 300, 150, 160, 0, 300, 150);
+				//clip=getClippedRegion(rasterContext,rasterContext.width,rasterContext.height);
+	          //  rasterContext.drawImage(clip, canvas.width * Math.random(), canvas.height * Math.random());
+				
+				
+				//var image= new Image();
+			//	var image="brama.jpg";
+			//	 var imagePieces = [16];
+			//	 var numColsToCut=4;
+			//	 var numRowsToCut=4;
+			//	 var widthOfOnePiece=100;
+			//	 var heightOfOnePiece=100;
+    /* for(var x = 0; x < numColsToCut; ++x) {
+        for(var y = 0; y < numRowsToCut; ++y) {
+            var canvas = document.createElement('canvas');
+            canvas.width = widthOfOnePiece;
+            canvas.height = heightOfOnePiece;
+            var context = canvas.getContext('2d');
+            context.drawImage(image, x * widthOfOnePiece, y * heightOfOnePiece, widthOfOnePiece, heightOfOnePiece, 0, 0, canvas.width, canvas.height);
+            imagePieces.push(canvas.toDataURL());
+			    var anImageElement = document.getElementById('myImageElementInTheDom');
+         anImageElement.src = imagePieces[0];
+        }
+    }*/
+	
+	
+            });
+        });
+
+        document.getElementById("getLocation").addEventListener("click", function(event) {
+            if (! navigator.geolocation) {
+                console.log("No geolocation.");
+            }
+
+            navigator.geolocation.getCurrentPosition(position => {
+                console.log(position);
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
+
+                map.setView([lat, lon]);
+            }, positionError => {
+                console.error(positionError);
+            });
+        });
+		        let items = document.querySelectorAll('.item');
+        for (let item of items) {
+            item.addEventListener("dragstart", function(event) {
+                this.style.border = "5px dashed #D8D8FF";
+                event.dataTransfer.setData("text", this.id);
+            });
+
+            item.addEventListener("dragend", function(event) {
+                this.style.borderWidth = "0";
+            });
+        }
+
+        let targets = document.querySelectorAll(".drag-target");
+        for (let target of targets) {
+            target.addEventListener("dragenter", function (event) {
+                this.style.border = "2px solid #7FE9D9";
+            });
+            target.addEventListener("dragleave", function (event) {
+                this.style.border = "2px dashed #7f7fe9";
+            });
+            target.addEventListener("dragover", function (event) {
+                event.preventDefault();
+            });
+            target.addEventListener("drop", function (event) {
+                let myElement = document.querySelector("#" + event.dataTransfer.getData('text'));
+                this.appendChild(myElement)
+                this.style.border = "2px dashed #7f7fe9";
+            }, false);
+        }
+
+    </script>
+</body>
+</html>
+</html>

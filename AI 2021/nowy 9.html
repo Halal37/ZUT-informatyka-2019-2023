@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creating Nodes</title>
+</head>
+<body>
+<div id="fajny-div">  
+<ul id="fajna-lista">    
+<li>Element 1</li>    
+<li>Element 2</li>  </ul> 
+ <button id="fajny-guzik" onclick="abc()">    Fajny Guzik
+  </button></div>
+    <script>
+	        function createListItem() {
+            let newLi = document.createElement('li');
+            newLi.innerText = `Item ${counter++}`;
+            return newLi;
+        }
+
+      function abc() {
+     let x1 = document.getElementById("fajna-lista");
+     let x2 = createListItem();
+       x1.parentElement.replaceChild(x2, x1);
+        }
+		
+    </script>
+</body>
+</html>

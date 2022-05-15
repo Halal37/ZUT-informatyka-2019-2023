@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\JaSzw\OneDrive\Pulpit\ISE\Laby121\Laby12.ncd
+OUTFILE=C:\Users\JaSzw\OneDrive\Pulpit\ISE\Laby121\Laby12.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\JaSzw\OneDrive\Pulpit\ISE\Laby121
+LICENSE=WebPack
+USER_INFO=211919616_0_0_824

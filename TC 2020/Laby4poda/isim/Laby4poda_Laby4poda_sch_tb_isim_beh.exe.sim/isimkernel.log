@@ -1,0 +1,28 @@
+Command line:
+   Laby4poda_Laby4poda_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  4
+     -socket  56468
+
+Sun Apr 05 22:44:23 2020
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5003.76 Meg
+
+ Total Signals          : 34
+ Total Nets             : 20
+ Total Signal Drivers   : 12
+ Total Blocks           : 8
+ Total Primitive Blocks : 6
+ Total Processes        : 14
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 102
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 5003.76 Meg
+
+Sun Apr 05 22:46:09 2020
+

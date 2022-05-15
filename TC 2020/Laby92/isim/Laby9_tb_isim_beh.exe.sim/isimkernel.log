@@ -1,0 +1,10 @@
+Command line:
+   Laby9_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51990
+
+Wed May 06 11:58:51 2020
+
+
+ Elaboration Time: 0.078125 sec

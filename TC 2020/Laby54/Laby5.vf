@@ -1,0 +1,51 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Laby5.vf
+// /___/   /\     Timestamp : 04/08/2020 15:40:59
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby54/Laby5.vf -w C:/Users/JaSzw/OneDrive/Pulpit/ISE/Laby54/Laby5.sch
+//Design Name: Laby5
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Laby5(i_a, 
+             i_b, 
+             o_yamb, 
+             o_yarb, 
+             o_ya_wieksze_b);
+
+    input i_a;
+    input i_b;
+   output o_yamb;
+   output o_yarb;
+   output o_ya_wieksze_b;
+   
+   wire XLXN_1;
+   wire XLXN_11;
+   
+   AND2  XLXI_2 (.I0(i_b), 
+                .I1(XLXN_11), 
+                .O(o_yamb));
+   AND2  XLXI_3 (.I0(XLXN_1), 
+                .I1(i_a), 
+                .O(o_ya_wieksze_b));
+   INV  XLXI_4 (.I(i_b), 
+               .O(XLXN_1));
+   INV  XLXI_7 (.I(i_a), 
+               .O(XLXN_11));
+   XNOR2  XLXI_9 (.I0(i_b), 
+                 .I1(i_a), 
+                 .O(o_yarb));
+endmodule
