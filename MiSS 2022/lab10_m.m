@@ -1,0 +1,1 @@
+[A,B,C,D]=linmod("Lab10_mod_liniowy",[14 7], 7.344)
