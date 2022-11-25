@@ -1,0 +1,39 @@
+[2022-10-04T11:31:39.465203+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:32:23.278283+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:33:41.591251+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:34:35.192681+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:34:56.631694+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:35:21.570657+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:35:31.857648+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:35:31.865848+00:00] my_log.WARNING: warning [] []
+[2022-10-04T11:39:26.018955+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:39:26.031810+00:00] my_log.WARNING: warning [] []
+[2022-10-04T11:40:16.720177+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:41:20.542153+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:41:20.550628+00:00] my_log.WARNING: warning [] []
+[2022-10-04T11:42:53.860285+00:00] my_log.ERROR: error [] []
+[2022-10-04T11:42:53.871164+00:00] my_log.WARNING: warning [] []
+
+
+
+[2022-10-06T19:54:41.364655+00:00] my_log.ERROR: error [] []
+
+
+
+[2022-10-06T19:58:49.794087+00:00] my_log.ERROR: error [] []
+[2022-10-06T19:58:49.805011+00:00] my_log.WARNING: warning [] []
+[2022-10-06T19:58:49.809121+00:00] my_log.INFO: Duck created. [] []
+
+
+[2022-10-06T20:00:24.372338+00:00] my_log.ERROR: error [] []
+[2022-10-06T20:00:24.381147+00:00] my_log.WARNING: warning [] []
+[2022-11-16T21:14:28.319202+00:00] my_log.ERROR: error [] []
+
+[2022-11-16T21:14:28.365478+00:00] my_log.WARNING: warning [] []
+[2022-11-16T21:14:55.715867+00:00] my_log.ERROR: error [] []
+
+[2022-11-16T21:14:55.725688+00:00] my_log.WARNING: warning [] []
+[2022-11-16T21:14:55.729385+00:00] my_log.INFO: Duck created. [] []
+[2022-11-16T21:14:55.729856+00:00] my_log.DEBUG: Quack() executed. [] []
+[2022-11-16T21:14:55.730456+00:00] my_log.DEBUG: Quack() executed. [] []
+[2022-11-16T21:14:55.731066+00:00] my_log.DEBUG: Quack() executed. [] []

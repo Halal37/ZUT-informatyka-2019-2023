@@ -1,0 +1,18 @@
+{
+    "name": "ilidwin/lab-composer",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ilidwin\\LabComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wojciech Lidwin"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^3.2"
+    }
+}
