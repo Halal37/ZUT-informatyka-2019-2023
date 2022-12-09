@@ -1,0 +1,10 @@
+<p>Lista komponentów</p>
+<form (submit)="onSubmit(inputText.value)">
+  <input #inputText placeholder="Wartość">
+  <button>Dodaj</button>
+</form>
+
+<li *ngFor="let value of empList | keyvalue">
+  <span>{{value.value}}</span>
+  <a role="button" (click)="deleteValue(value.key)"> Usuń</a>
+</li>
