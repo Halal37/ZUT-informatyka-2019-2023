@@ -1,0 +1,8 @@
+
+<h2>Local storage DB</h2>
+<li *ngFor="let person of people; index as idx">
+  <a routerLink="/details/{{idx}}">{{person.firstName}} {{person.familyName}}</a>
+  <button type="button" (click)="deletePersonFromList(idx)">Delete</button>
+</li>
+<button (click)="goAdd()">Dodaj osobe</button>
+
