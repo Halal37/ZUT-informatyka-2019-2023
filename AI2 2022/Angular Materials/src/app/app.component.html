@@ -1,0 +1,8 @@
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a mat-tab-link [routerLink]="['/tasks']" [active]="activeUrl() === '/tasks'">Tasks</a>
+  <a mat-tab-link [routerLink]="['/archive']" [active]="activeUrl() === '/archive'">Archive</a>
+</nav>
+
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+
+<router-outlet></router-outlet>

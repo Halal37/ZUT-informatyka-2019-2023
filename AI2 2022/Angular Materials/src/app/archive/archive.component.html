@@ -1,0 +1,5 @@
+<mat-card *ngFor="let task of archivedTasks; let i = index">
+  <p>{{task.title}}<br>{{task.deadline}}
+    <button mat-raised-button color="warn" type="button" (click)="deleteOnClick(task)">Delete</button>
+  </p>
+</mat-card>
