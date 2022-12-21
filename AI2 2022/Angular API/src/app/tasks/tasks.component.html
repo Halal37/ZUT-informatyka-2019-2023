@@ -1,0 +1,14 @@
+<a [routerLink]="['/archive']">Archive</a>
+<br>
+<br>
+<input type="text" placeholder="Task" #taskInput>
+<input type="date" #dateInput>
+<button type="button" (click)="onAddTaskClick(taskInput.value, dateInput.value)">Add</button>
+<br>
+<br>
+<button type="button" (click)="onArchiveClick()">Archive</button>
+<p *ngFor="let task of activeTasks">
+  {{task.title}}
+  {{task.deadline}}
+  <input type="checkbox" unchecked (click)="switchTaskChanged(task)">
+</p>

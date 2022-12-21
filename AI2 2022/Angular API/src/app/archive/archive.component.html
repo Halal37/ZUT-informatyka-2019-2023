@@ -1,0 +1,6 @@
+<a [routerLink]="['/tasks']">Archive</a>
+<br>
+<br>
+<p *ngFor="let task of archivedTasks; let i = index">
+  {{task.title}} {{task.deadline}}<button type="button" (click)="deleteOnClick(task)">Delete</button>
+</p>
